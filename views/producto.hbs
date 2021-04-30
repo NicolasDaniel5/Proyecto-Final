@@ -1,0 +1,27 @@
+<head>
+    <header>
+    <ul>
+     <li><a href="/">Inicio</a></li>
+        <li><a href="/login">Entrar</a></li>
+        <li><a href="admin/productos">Productos</a></li>
+        <li style="float:right"><a class="active" href="/carrito">Carrito</a></li>
+    </ul>
+        <h1 style="display: flex; justify-content: center; color: black;">Me lo merezco</h1>
+    </header>
+</head>
+
+<body style="background-color: moccasin;">
+<div class="container">
+    {{#each producto}}
+    <img src="/images/{{uid}}" alt="" style="display: block; margin:auto; padding-bottom: 50px; padding-top: 50px">
+    <form action="/admin/productos/single/{{id}}" method="POST">
+        <h2 name="nombre" >{{nombre}}</h2>
+        <h2 name="precio">${{precio}}</h2>
+        <label for="cantidad">Cantidad:</label>
+        <input type="number" class="form-control" name="cantidad" placeholder="cantidad" min="1" max="10">
+        <button class="btn btn-primary">Comprar</button>
+    </form>
+
+    {{/each}}
+</div>
+</body>

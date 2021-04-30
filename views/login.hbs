@@ -1,0 +1,35 @@
+<head>
+    <header>
+    <ul>
+     <li><a href="/">Inicio</a></li>
+        <li><a href="/login">Entrar</a></li>
+        <li><a href="admin/productos">Productos</a></li>
+        <li style="float:right"><a class="active" href="/carrito">Carrito</a></li>
+    </ul>
+        <h1 style="display: flex; justify-content: center; color: black;">Me lo merezco</h1>
+    </header>
+</head>
+
+<body style="background-color: moccasin;">
+    <div class="containere" style="margin-top: 20px; display:flex; justify-content:center">
+        <div class="row">
+            <div class="col-8">
+                <form method="POST" action="/login">
+                    <div class="form-group">
+                        <label for="username">Username:</label>
+                        <input type="text" class="form-control" name="username" placeholder="username" style="width: 250px;">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" name="password" placeholder="password" style="width: 250px;"><br>
+                        <button type="submit" class="btn btn-dark">Login</button>
+                        <a href="/registro/create">Registrate</a>
+                    </div>
+                    
+                </form>
+                
+            </div>
+        </div>
+    </div>
+    <h5 style="display: flex; justify-content:center">{{message}}</h5>
+
+
+</body>

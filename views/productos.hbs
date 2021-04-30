@@ -1,0 +1,31 @@
+  <!DOCTYPE html>
+<html>
+<head>
+    <header>
+    <ul>
+     <li><a href="/">Inicio</a></li>
+        <li><a href="/login">Entrar</a></li>
+        <li><a href="">Productos</a></li>
+        <li style="float:right"><a class="active" href="/carrito">Carrito</a></li>
+    </ul>
+        <h1 style="display: flex; justify-content: center; color: black;">Me lo merezco</h1>
+    </header>
+</head>
+
+  <body style="background-color: moccasin;">
+<div class="container">
+  <div class="row">
+        {{#each productos}}
+          <div class="card " style="width: 18rem; margin-right: 90px; margin-bottom: 40px ">
+            <img src="/images/{{uid}}" width="250" height="250" class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">{{nombre}}</h5>
+               <p class="card-text">${{precio}}</p>
+               <a href="/admin/productos/single/{{id}}" class="btn btn-primary">Agregar al carrito</a>
+          </div>
+      </div>
+      {{/each}}
+  </div>
+</div>
+
+</body>

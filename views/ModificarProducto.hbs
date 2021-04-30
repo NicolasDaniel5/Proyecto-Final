@@ -1,0 +1,22 @@
+ <body style="background-color: moccasin;">
+     
+     <h2>Modificar Producto:</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                {{#each producto}}
+                <form method="POST" action="/admin/productos/update/{{id}}">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre" value="{{nombre}}">
+                        <label for="precio">Precio:</label>
+                        <input type="number" class="form-control" name="precio" value="{{precio}}" min="1">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</body>

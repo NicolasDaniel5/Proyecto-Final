@@ -1,0 +1,28 @@
+ <body style="background-color: moccasin;">
+     
+     <h2>Modificar Usuario:</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                {{#each usuario}}
+                <form method="POST" action="/admin/usuarios/update/{{id}}">
+                    <div class="form-group">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre" value="{{nombre}}">
+                        <label for="apellido">Apellido:</label>
+                        <input type="text" class="form-control" name="apellido" value="{{apellido}}">
+                        <label for="mail">Mail:</label>
+                        <input type="text" class="form-control" name="mail" value="{{mail}}">
+                        <label for="username">Usename:</label>
+                        <input type="text" class="form-control" name="username" value="{{username}}">
+                        <label for="password">Password:</label>
+                        <input type="password" class="form-control" name="password" value="{{password}}">                        
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+                {{/each}}
+            </div>
+        </div>
+    </div>
+
+</body>

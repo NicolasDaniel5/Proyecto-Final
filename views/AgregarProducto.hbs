@@ -1,0 +1,21 @@
+ <body style="background-color: moccasin;">
+     
+     <h2>Agregar producto:</h2>
+    <div class="container">
+        <div class="row">
+            <div class="col-8">
+                <form method="POST" action="/admin/productos/create" enctype="multipart/form-data">
+                    <div class="form-group">
+                        <input type="file" placeholder="imagen" name= "imagen" class="form-control">
+                        <label for="nombre">Nombre:</label>
+                        <input type="text" class="form-control" name="nombre" placeholder="nombre">
+                        <label for="precio">Precio:</label>
+                        <input type="number" class="form-control" name="precio" placeholder="precio" min="1">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</body>

@@ -1,0 +1,40 @@
+<head>
+    <header>
+    <ul>
+     <li><a href="/">Inicio</a></li>
+        <li><a href="/login">Entrar</a></li>
+        <li><a href="admin/productos">Productos</a></li>
+        <li style="float:right"><a class="active" href="/carrito">Carrito</a></li>
+    </ul>
+        <h1 style="display: flex; justify-content: center; color: black;">Me lo merezco</h1>
+    </header>
+</head>
+
+<body style="background-color: moccasin;">
+        <h1>Lista de productos:</h1>
+        <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+            <th scope="col">Nombre</th>
+            <th scope="col">Precio</th>
+            <th scope="col">Ver mas</th>
+            <th scope="col">Modificar</th>
+            <th scope="col">Deshabilitar</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each productos}}
+            <tr>
+            <td>{{nombre}}</td>
+            <td>{{precio}}</td>
+            <td><a href="/admin/productos/single/{{id}}">Ver mas</a></td>
+            <td><a href="/admin/productos/update/{{id}}">Modificar</a></td>
+            <td><a href="/admin/productos/delete/{{id}}">Deshabilitar</a></td>
+            </tr>
+            {{/each}}
+        </tbody>
+        </table>
+        <a href="/admin/productos/create" style="color: black;">Agregar Producto</a><br><br>
+        <a href="/admin/usuarios" style="color: black;">Usuarios</a>
+        
+</body>
